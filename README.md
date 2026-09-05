@@ -1,2 +1,3 @@
-# my_repo
-wrd的workspace
+# 王瑞栋的个人主页
+
+一个无需构建步骤的静态网站。直接用浏览器打开 `index.html` 即可预览。

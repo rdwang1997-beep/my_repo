@@ -1,0 +1,65 @@
+:root {
+  --ink: #171716;
+  --paper: #f5f3ee;
+  --accent: #ff5c35;
+  --line: rgba(23, 23, 22, 0.2);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "Noto Sans SC", sans-serif;
+}
+
+.hero {
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: auto;
+  padding: 32px clamp(24px, 6vw, 88px) 26px;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+}
+
+.nav, footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo, .nav-link, footer { font-family: "DM Mono", monospace; }
+.logo { color: var(--ink); font-size: 1.25rem; font-weight: 500; text-decoration: none; letter-spacing: -.07em; }
+.logo span { color: var(--accent); }
+.nav-link { color: var(--ink); font-size: .78rem; text-decoration: none; }
+.nav-link span { color: var(--accent); font-size: 1.1rem; }
+
+.intro { align-self: center; padding: clamp(72px, 13vh, 150px) 0; }
+.eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 22px; font: .75rem "DM Mono", monospace; letter-spacing: .08em; }
+.eyebrow span, .status span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+h1 { margin: 0; font-size: clamp(5rem, 15vw, 14rem); line-height: .93; letter-spacing: -.1em; font-weight: 900; }
+.role { margin: 32px 0 12px; font: 500 clamp(1rem, 1.5vw, 1.3rem) "DM Mono", monospace; letter-spacing: -.04em; }
+.role i { color: var(--accent); font-style: normal; }
+.summary { max-width: 440px; margin: 0; color: #5d5b57; font-size: 1rem; line-height: 1.9; }
+
+.facts { display: grid; grid-template-columns: 1fr 1fr 1.3fr; border-top: 1px solid var(--line); }
+.fact { min-height: 125px; padding: 20px 24px 20px 0; border-right: 1px solid var(--line); }
+.fact + .fact { padding-left: 24px; }
+.fact:last-child { border: 0; }
+.fact-label { margin: 0 0 15px; color: #76736d; font: .68rem "DM Mono", monospace; letter-spacing: .08em; }
+.fact-value { margin: 0; font-size: clamp(1rem, 1.35vw, 1.25rem); font-weight: 700; }
+
+footer { padding-top: 25px; border-top: 1px solid var(--line); color: #76736d; font-size: .65rem; letter-spacing: .04em; }
+.status { display: flex; align-items: center; gap: 7px; }
+.status span { width: 6px; height: 6px; background: #75a66a; }
+
+@media (max-width: 650px) {
+  .hero { padding: 24px; }
+  .intro { padding: 90px 0; }
+  h1 { font-size: clamp(4rem, 21vw, 7rem); }
+  .facts { grid-template-columns: 1fr; }
+  .fact, .fact + .fact { min-height: auto; padding: 18px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+  .fact:last-child { border-bottom: 0; }
+  footer { align-items: flex-start; gap: 12px; flex-direction: column; }
+}

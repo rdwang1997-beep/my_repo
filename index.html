@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="王瑞栋的个人主页" />
+    <title>王瑞栋 · 个人主页</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="hero">
+      <nav class="nav" aria-label="主导航">
+        <a class="logo" href="/" aria-label="返回首页">WRD<span>.</span></a>
+        <a class="nav-link" href="mailto:rdwang1997@163.com">联系我 <span aria-hidden="true">↗</span></a>
+      </nav>
+
+      <section class="intro" aria-labelledby="name">
+        <p class="eyebrow"><span></span> HELLO, I'M</p>
+        <h1 id="name">王瑞栋</h1>
+        <p class="role">Senior Software Engineer <i>at</i> Meituan</p>
+        <p class="summary">
+          专注于把复杂问题转化为可靠、优雅的产品体验。
+        </p>
+      </section>
+
+      <section class="facts" aria-label="个人信息">
+        <article class="fact">
+          <p class="fact-label">出生</p>
+          <p class="fact-value">1997</p>
+        </article>
+        <article class="fact">
+          <p class="fact-label">现职</p>
+          <p class="fact-value">美团高级开发工程师</p>
+        </article>
+        <article class="fact">
+          <p class="fact-label">教育</p>
+          <p class="fact-value">西安电子科技大学</p>
+        </article>
+      </section>
+
+      <footer>
+        <p>© <span id="year"></span> WANG RUIDONG</p>
+        <p class="status"><span></span> AVAILABLE FOR A GOOD CONVERSATION</p>
+      </footer>
+    </main>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
